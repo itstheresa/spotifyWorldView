@@ -6,6 +6,9 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+#Adding RSporify OAuth code
+RSpotify::authenticate("b9e86650cc7a4733a7e24180f5b9014a", "e47d7214bf674d5586916f70b0bc68bd")
+
 module SpotifyWorldView
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
