@@ -53,4 +53,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  
+  #For Spotify OAuth using RSpotify
+  get '/auth/spotify/callback', to: 'users#spotify'
 end
