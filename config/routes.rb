@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -55,5 +55,6 @@ Rails.application.routes.draw do
   #   end
   
   #For Spotify OAuth using RSpotify
+  get 'welcome' => 'pages#home'
   get '/auth/spotify/callback', to: 'users#spotify'
 end
