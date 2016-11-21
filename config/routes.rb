@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get '/albums' to: 'albums#index'
-  get '/albums/:id', to: 'albums#show', as: 'album'
+  get '/albums/:id', to:'albums#show', as: 'album'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
