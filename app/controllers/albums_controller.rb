@@ -4,8 +4,9 @@ class AlbumsController < ApplicationController
      @albums = RSpotify::Album.search(params[:album_name])
     else
      redirect_to root_path
+  	end
   end
-
+  
   def show
   	@album = RSpotify::Album.find(params[:id])
   end
