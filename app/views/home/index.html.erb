@@ -30,7 +30,7 @@
               </label>
               <!--Adding search by keyword functionality-->
             <%= form_tag albums_path, method: "get", html: { class: "form" } do %>
- 			<div class="form-group col-xs-4">
+ 			<div class="form-group">
    			<%= text_field_tag(:album_name, "", placeholder: "Enter album name", class: "form-control") %>
  			</div>
  			<%= submit_tag "Search", class: "btn btn-primary" %>
