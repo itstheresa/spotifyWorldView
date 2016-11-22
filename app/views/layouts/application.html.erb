@@ -7,8 +7,25 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+   	<header class="navbar navbar-fixed-top navbar-inverse">
+  	<div class="container">
+    <%= link_to "Spotify WorldView", '#', id: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+      	<%= form_tag albums_path, method: "get", html: { class: "form" } do %>
+ 		<div class="form-group col-xs-4">
+   			<%= text_field_tag(:album_name, "", placeholder: "Enter album name", class: "form-control") %>
+ 		</div>
+ 		<%= submit_tag "Search", class: "btn btn-primary" %>
+        <li><%= link_to "Log in", '#' %></li>
+      </ul>
+    </nav>
+  	</div>
+  	</header>
+  	<div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
+<% end %>
