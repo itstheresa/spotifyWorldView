@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
+=======
+
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
 @font-face {
   font-family: 'proxima_nova';
   src: url('https://d3nkxvtkt5c8vi.cloudfront.net/3.0.1/fonts/proxima_nova_light_0.eot');

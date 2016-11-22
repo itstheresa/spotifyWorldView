@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
 google.load("visualization", "1", {packages:["geochart"]});
 google.setOnLoadCallback(onGoogleLoaded);
 
@@ -32,7 +35,10 @@ function onGoogleLoaded() {
   var albumInfoBig = document.querySelector('#data-info');
   var infoContainer = document.querySelector('#regions-info');
   var exactSearchButton = document.querySelector('#exact-search-button');
+<<<<<<< HEAD
   var logIn = document.querySelector('#log-in');
+=======
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
 
   var albumInfoBigTemplate = document.querySelector('#template-album-info-big').innerHTML;
   var albumNotAvailableTemplate = document.querySelector('#template-album-not-available').innerHTML;
@@ -48,7 +54,10 @@ function onGoogleLoaded() {
   exactSearchButton.checked = !getExactSearchEnabled();
   exactSearchButton.addEventListener('change', handleExactChange);
   searchForm.addEventListener('submit', handleFormSubmit);
+<<<<<<< HEAD
   logIn.addEventListener('submit', handleLogIn);
+=======
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
 
   function handleFormSubmit(evt) {
     evt.preventDefault();
@@ -117,9 +126,12 @@ function onGoogleLoaded() {
 
     return false;
   }
+<<<<<<< HEAD
   
   //inserting log in functionality
   //function handleLogIn
+=======
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
 
   function parseUri(uri, delimiter) {
     var segments = uri.split(delimiter || ':');
@@ -432,4 +444,8 @@ function onGoogleLoaded() {
   chart = new google.visualization.GeoChart(chartContainer);
   
   performSearch(getLastSearch() || "18qY7zpuNqeXNGywRysjxx");
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> parent of 8755f7f... Moving code into proper files for home
