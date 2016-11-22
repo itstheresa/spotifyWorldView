@@ -9,61 +9,6 @@
     
   </head>
   <body>
-  <nav>
-   <header class="navbar navbar-fixed-top navbar-inverse">
-  	<div class="container">
-  	<span class="navbar-brand">
-    	<span class="navbar-title">Album Availability on Spotify</span>
-    </span>
-      <ul class="nav navbar-form navbar-left form-inline">
-      	<%= form_tag albums_path, method: "get", html: { class: "form" } do %>
- 		<div class="form-group">
-   			<%= text_field_tag(:album_name, "", placeholder: "Enter album name", class: "form-control") %>
- 		</div>
- 		<%= submit_tag "Search", class: "btn btn-default" %>
-      </ul>
-      <u2 class="nav navbar-nav navbar-right">
-      	<li><%= link_to "Log in", '#' %></li>
-      </u2>
-    </nav>
-  	</div>
-   </header>
-
-    <div class="albums-only">
-      <h2>Only albums are supported</h2>
-    </div>
-    
-  	<div class="container">
-      <%= yield :javascript %>
-    </div>
-    
-    <script id="template-album-info-big" type="x-tmpl-mustache">
-      <h1 class="title">{{albumTitle}}</h1>
-      <h2 class="artist">{{albumType}} by {{artistName}}</h2>
-    </script>
-
-    <script id="template-album-not-found" type="x-tmpl-mustache">
-      <div class="row alert-warning">
-        Exact match for the requested album is not available <a href="{{albumApiLink}}">{{albumUri}}</a>
-      </div>
-    </script>
-
-    <script id="template-album-not-available" type="x-tmpl-mustache">
-      <h3 class="row">Not available</h4>
-      <div class="row">
-        <p>
-        {{#markets}}
-          <span title="{{name}} ">{{code}}</span>
-        {{/markets}}
-        </p>
-      </div>
-    </script>
-    
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
-    <script type="text/javascript" src="application.js"></script>
-
+	<%= yield %>
   </body>
 </html>
-<% end %>
