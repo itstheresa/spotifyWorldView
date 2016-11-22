@@ -48,7 +48,7 @@ function onGoogleLoaded() {
   exactSearchButton.checked = !getExactSearchEnabled();
   exactSearchButton.addEventListener('change', handleExactChange);
   searchForm.addEventListener('submit', handleFormSubmit);
-  logIn.addEventlistener('submit', handleLogIn);
+  logIn.addEventListener('submit', handleLogIn);
 
   function handleFormSubmit(evt) {
     evt.preventDefault();
