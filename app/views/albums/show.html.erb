@@ -1,11 +1,11 @@
-<h1 class="page-header"><%= @album.name %></h1>
+<h1 class="page-header"><%= @album.name %> track list:</h1>
    <% @album.tracks.each do |track| %>
      <li>
        <%= track.name %>
      </li>
 <% end %>
      
-<h3><%= @album.name %></h3>
+<h3><%= @album.name %> is available in: </h3>
    <% @album.available_markets.each do |available_market| %>
      <li>
        <%= available_market %>
