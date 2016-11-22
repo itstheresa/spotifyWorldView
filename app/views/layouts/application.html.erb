@@ -28,27 +28,13 @@
     </nav>
   	</div>
    </header>
-  	  
-  	<div class="container regions">
-      <div class="row">
-        <div class="map col-md-9">
-          <div id="data-info" class="entity-info">
-            <h1 class="title"></h1>
-            <h2 class="artist"></h2>
-          </div>
-          <div id="regions-map"></div>
-        </div>
-        <div class="info col-md-3 albums-info" id="regions-info" data-active="null">
-        </div>
-      </div>
-    </div>
 
     <div class="albums-only">
       <h2>Only albums are supported</h2>
     </div>
     
   	<div class="container">
-      <%= yield %>
+      <%= yield :javascript %>
     </div>
     
     <script id="template-album-info-big" type="x-tmpl-mustache">
@@ -74,7 +60,10 @@
     </script>
     
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="https://github.com/itstheresa/spotifyWorldView/tree/master/app/assets/javascripts/sitewide/originalScript.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.2/d3.min.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+
   </body>
 </html>
 <% end %>
