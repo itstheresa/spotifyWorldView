@@ -1,7 +1,8 @@
-<h1 class="page-header">Albums Matching "<%= params[:album_name] %>"</h1>
+<h1 class="page-header">Albums Found Matching "<%= params[:album_name] %>"</h1>
 <ul>
- <% @albums.each do |album| %>
-   <li><%= album.name %> | <%= link_to "Show", album_path(album.id) %></li>
+ <!--Print out list of 20 results from searching-->
+ <% @albums.each do |album| %> 
+   <li><%= album.name %> by <%= album.artists %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
    
  <% end %>
 </ul>

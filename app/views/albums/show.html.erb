@@ -1,17 +1,22 @@
+<!--Layout of album information page-->
 <h1 class="page-header"><%= @album.name %> track list:</h1>
    <% @album.tracks.each do |track| %>
      <li>
        <%= track.name %>
      </li>
 <% end %>
+
+<h3><%= @album.name %> 's URI is <%= @album.uri %> </h3>
+	<!--extract URI-->
+  	<% uriString = @album.uri %>
+  	<% separatedURI = uriString.split(":") %>
+  	<% uri = separatedURI[2] %>
+  	<!--string together URL-->
+  	<% url = "https://itstheresa.github.io/spotifyWorldView/#" + uri %>
+	<%= link_to "See album availability", url%>
      
 <h3><%= @album.name %> is available in: </h3>
    <% @album.available_markets.each do |available_market| %>
-     <li>
-       <%= available_market %>
-     </li>
+       <%= available_market + ","%>
 	
 <% end %>
-
-<center><%= link_to "Go to Map", 'https://itstheresa.github.io/spotifyWorldView/', class: "btn btn-lg btn-default" %>
- 	</center>

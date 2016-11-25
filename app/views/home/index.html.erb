@@ -1,15 +1,12 @@
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<h1 class="page-header">Spotify WorldView</h1>
+		<h1 class="page-header">Spotify WorldView</h1>
+		<%= form_tag albums_path, method: "get", html: { class: "form" } do %>
+		<div class="form-group col-xs-4">
+   		<%= text_field_tag(:album_name, "", placeholder: "Search album by name", class: "form-control") %>
+ 		</div>
+ 		<%= submit_tag "Search Album", class: "btn btn-default" %>
 
-<%= form_tag albums_path, method: "get", html: { class: "form" } do %>
- <div class="form-group col-xs-4">
-   <%= text_field_tag(:album_name, "", placeholder: "Search album by name", class: "form-control") %>
- </div>
- <%= submit_tag "Search Album", class: "btn btn-default" %>
- <br></br>
- <br></br>
- <br></br>
-    <center><%= link_to "Go to Map", 'https://itstheresa.github.io/spotifyWorldView/', class: "btn btn-lg btn-default" %>
- </center>
+    	<center><%= link_to "Go to Map", 'https://itstheresa.github.io/spotifyWorldView/', class: "btn btn-lg btn-default" %>
+ 		</center>
+ 		<% end %>
 </div>
-<% end %>
