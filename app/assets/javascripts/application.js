@@ -18,6 +18,8 @@
 //= require_tree ./sitewide
 //= require bootstrap-sprockets
 
+//majority of this code is taken from the original open source project and pasted here
+//because this was one of the few places I could figure to place javascript code
 google.load("visualization", "1", {packages:["geochart"]});
 google.setOnLoadCallback(onGoogleLoaded);
 
@@ -119,15 +121,16 @@ function onGoogleLoaded() {
     return false;
   }
 
+  //changed else of this function so search wouldn't need to be particularly formatted
   function parseUri(uri, delimiter) {
     var segments = uri.split(delimiter || ':');
     var id, type;
     if (segments[1] === 'user') {
       type = segments[3];
       id = segments[2] + ':' + segments[4];
-    } else if (segments[1] === 'album') {
-      type = segments[1];
-      id = segments[2];
+    } else {
+      type = "album";
+      id = segments[0];
     }
     return {type: type, id: id};
   }
