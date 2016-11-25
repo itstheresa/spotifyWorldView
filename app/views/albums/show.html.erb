@@ -17,6 +17,5 @@
      
 <h3><%= @album.name %> is available in: </h3>
    <% @album.available_markets.each do |available_market| %>
-       <%= available_market.join(', ')%>
-	
+       <%= available_market + ", "%>	
 <% end %>
