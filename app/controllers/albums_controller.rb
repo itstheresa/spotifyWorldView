@@ -2,7 +2,7 @@ class AlbumsController < ApplicationController
   def index #controls what happens after search
   	if !params[:album_name].empty?
      @albums = RSpotify::Album.search(params[:album_name]) #utilizes Spotify search
-     #create hashes of countries to names and empty arrays
+     #create hashes of countries to names and empty arrays that will hold albums from that country
      @countryNames = {"AD" => "Andorra", "AR" => "Argentina","AU" => "Australia","AT" => "Austria",
 		"BE" => "Belgium","BO" => "Bolivia","BR" => "Brazil","BG" => "Bulgaria","CA" => "Canada","CL" => "Chile",
 		"CO" => "Colombia","CR" => "Costa Rica","CY" => "Cyprus","CZ" => "Czech Republic","DK" => "Denmark",
@@ -37,6 +37,6 @@ class AlbumsController < ApplicationController
   end
   
   def countries #leads to page of a specific country to list available albums from search results
-  	@country = countryCode
+  	@country = countries["#{countryCode}"]
   end
 end
