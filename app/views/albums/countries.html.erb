@@ -1,7 +1,7 @@
 <!--Layout of albums by country page-->
-<h1 class="page-header"><%= @country %> track list:</h1>
-   <% @album.tracks.each do |track| %> <!--list out tracks of album-->
+<h1 class="page-header"><%= @country %>'s Albums:</h1>
+   <% @country.each do |album| %> <!--list out tracks of album-->
      <li>
-       <%= track.name %>
+       <%= album %>
      </li>
 <% end %>

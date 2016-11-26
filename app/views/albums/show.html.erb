@@ -15,7 +15,8 @@
   	<!--string together URL-->
   	<% url = "https://itstheresa.github.io/spotifyWorldView/#" + uri %>
 	<%= link_to "See album availability", url%>
-     
+
+<!--list out album's available markets-->
 <h3><%= @album.name %> is available in: </h3>
    <% @album.available_markets.each do |available_market| %>
        <%= available_market + ", "%>	
