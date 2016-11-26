@@ -3,6 +3,18 @@
  <!--Print out list of 20 results from searching-->
  <% @albums.each do |album| %> 
    <li><%= album.name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
-   
+   		<!--Mapping album search results to countries that they are available-->
+   		<% album.available_markets.each do |available_market| %>
+   			<% @countries.each do |countryCode, countryArray| %>
+   				<% if countryCode == available_market %>
+   					<% countryArray.push(album.name) %>
+   				<% end %>
+   			<% end %>
+   		<% end %>
+ <% end %>
+ <br></br>
+ <h3>See which albums are available in a country:</h3>
+ <% @countryNames.each do |countryCode, countryName| %>
+ 	<%= link_to "#{countryName}", country_path(countryCode) %>
  <% end %>
 </ul>

@@ -1,12 +1,13 @@
 <!--Layout of album information page-->
 <h1 class="page-header"><%= @album.name %> track list:</h1>
-   <% @album.tracks.each do |track| %>
+   <% @album.tracks.each do |track| %> <!--list out tracks of album-->
      <li>
        <%= track.name %>
      </li>
 <% end %>
 
 <h3><%= @album.name %> 's URI is <%= @album.uri %> </h3>
+	
 	<!--extract URI-->
   	<% uriString = @album.uri %>
   	<% separatedURI = uriString.split(":") %>
