@@ -34,7 +34,7 @@
                 </div></center>
           </form>
           <form class="navbar-form navbar-right form-inline">
-            <a href="http://localhost:3000" class="btn btn-default">Search by Keyword</a>
+            <a href="app/views/home/index.html.erb" class="btn btn-default">Search by Keyword</a>
           </form>
         </div><!-- /.navbar-collapse -->
       </div>
@@ -60,7 +60,7 @@
     <script id="template-album-info-big" type="x-tmpl-mustache">
       <h1 class="title">{{albumTitle}}</h1>
       <h2 class="artist">{{albumType}} by {{artistName}}</h2>
-      <h6 Enter an album URI into the search bar, drag an album from the Spotify app, or search for an album by keyword and the map will show the countries in which the album is available. You can view all versions of an album by checking the box.</h6>
+      <h6 class="instructions">Enter an album URI into the search bar, drag an album from the Spotify app, or search for an album by keyword and the map will show the countries in which the album is available. You can view all versions of an album by checking the box.</h6>
     </script>
 
     <script id="template-album-not-found" type="x-tmpl-mustache">

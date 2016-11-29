@@ -1,5 +1,9 @@
 <h1 class="page-header">Albums Found Matching "<%= params[:album_name] %>"</h1>
 <ul>
+ <!--What to do if no search results-->
+ <% if @albums.length == 0 %>
+	 <h5>No results found matching query</h5>
+ <% end %>
  <!--Print out list of 20 results from searching-->
  <% @albums.each do |album| %> 
    <li><%= album.name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
