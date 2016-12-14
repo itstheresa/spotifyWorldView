@@ -1,0 +1,12 @@
+<h1><%= @spotify_user.display_name %></h1>
+<p>Country: <%= @spotify_user.country %></p>
+<ul>
+	<!--What to do if no albums saved by user-->
+	<% if @albums.length == 0 %>
+		<h5>No albums saved</h5>
+	<% end %>
+	<!--Print out all saved albums-->
+	<% @albums.each do |album| %> 
+		<li><%= album.name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
+	<% end %>
+</ul>
