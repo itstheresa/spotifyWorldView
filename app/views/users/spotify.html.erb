@@ -1,6 +1,8 @@
+<!--Part of New Functionality: Redirect page after logging in, showing user information and their saved albums-->
 <center><h1>You are logged in as: <%= @spotify_user.display_name %></h1>
 <img src="<%= @spotify_user.images[0].url %>">
-<p>Your Country: <%= @spotify_user.country %></p></center>
+<p>Your Country: <%= @spotify_user.country %></p>
+<%= link_to 'LOGOUT', root_url %></center>
 
 <h3>Your Saved Albums:</h3>
 <ul>

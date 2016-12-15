@@ -1,5 +1,5 @@
 <!--Layout of album information page-->
-<h1 class="page-header"><%= @album.name %>  by <%= album.artists[0].name %> track list:</h1>
+<h1 class="page-header"><%= @album.name %>  by <%= @album.artists[0].name %> track list:</h1>
    <% @album.tracks.each do |track| %> <!--list out tracks of album-->
      <li>
        <%= track.name %>
