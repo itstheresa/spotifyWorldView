@@ -6,6 +6,7 @@ UPDATED FOR FINAL TAKE HOME COMPONENT:
 Description: This application is an extension on the project "Album Availability" which adds 
 functionality to view the albums available in a country by allowing for a more intuitive 
 search by keyword rather than needing to find the URI of an album, as well as a NEW additional functionality that allows Spotify users specifically to log in and view tracklist and availability information on saved albums from their account.
+
 Innovative Aspects: The project is innovative because it has the ability to show a user a map interface that highlights countries in which an album in available, giving users an idea of where certain kinds of music are available and allowing a user to learn more about their favorite albums. It now also personalizes the experience for Spotify users since the application will pull up a list of their own saved albums for them to view the availability of.  The map interface is very eye-grabbing, and while it may only be something interesting for the average music listener to look at, for record label employees, they can see location demographics of their company or other company's music and where certain albums are reaching listeners through Spotify.
 
 Main files added/changed for new functionality (new code relied heavily on RSpotify, a Ruby wrapper for the Spotify Web API):
