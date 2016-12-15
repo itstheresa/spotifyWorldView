@@ -1,5 +1,8 @@
-<h1><%= @spotify_user.display_name %></h1>
-<p>Country: <%= @spotify_user.country %></p>
+<h1>You are logged in as: <%= @spotify_user.display_name %></h1>
+<img src="<%= @spotify_user.images[0].url %>">
+<p>Your Country: <%= @spotify_user.country %></p>
+
+<h3>Your Saved Albums:</h3>
 <ul>
 	<!--What to do if no albums saved by user-->
 	<% if @albums.length == 0 %>

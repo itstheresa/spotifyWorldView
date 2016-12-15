@@ -10,5 +10,10 @@ class AlbumsControllerTest < ActionDispatch::IntegrationTest
     get albums_show_url
     assert_response :success
   end
+  
+  test "should get countries" do
+    get albums_countries_url
+    assert_response :success
+  end
 
 end
