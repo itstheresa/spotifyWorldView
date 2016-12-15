@@ -6,7 +6,7 @@
  <% end %>
  <!--Print out list of 20 results from searching-->
  <% @albums.each do |album| %> 
-   <li><%= album.name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
+   <li><%= album.name %>  by <%= album.artists[0].name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
    		<!--Mapping album search results to countries that they are available-->
    		<% album.available_markets.each do |available_market| %>
    			<% @countries.each do |countryCode, countryArray| %>

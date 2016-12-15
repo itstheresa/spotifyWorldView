@@ -1,6 +1,6 @@
-<h1>You are logged in as: <%= @spotify_user.display_name %></h1>
+<center><h1>You are logged in as: <%= @spotify_user.display_name %></h1>
 <img src="<%= @spotify_user.images[0].url %>">
-<p>Your Country: <%= @spotify_user.country %></p>
+<p>Your Country: <%= @spotify_user.country %></p></center>
 
 <h3>Your Saved Albums:</h3>
 <ul>
@@ -10,6 +10,6 @@
 	<% end %>
 	<!--Print out all saved albums-->
 	<% @albums.each do |album| %> 
-		<li><%= album.name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
+		<li><%= album.name %> by <%= album.artists[0].name %> | <%= link_to "Show tracklist & availability", album_path(album.id) %></li>
 	<% end %>
 </ul>
