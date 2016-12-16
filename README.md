@@ -15,6 +15,14 @@ Main files added/changed for new functionality (new code relied heavily on RSpot
 - spotifyWorldView/app/views/home/index.html.erb //added link to sign into Spotify
 - spotifyWorldView/config/initializers/omniauth.rb //configuring open authorization and declaring scope values
 
+FINAL DELIVERABLES:
+[Updated Use Case Diagram](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/UseCaseDiagram.pdf)
+[Updated Use Case Descriptions](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/UseCaseDescriptions.pdf)
+[Updated Overall State Chart Diagram](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/OverallStatechart.pdf)
+[UI Mockup](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/NewFunctionalityUI.pdf)
+[Test Case](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/NewFunctionalityTestCase.pdf)
+[Take Home Submission Document](https://github.com/itstheresa/spotifyWorldView/blob/master/docs/TakeHomeComponent.pdf)
+
 [Link to Repository](https://github.com/itstheresa/spotifyWorldView)
 
 Instructions for Setup: 
