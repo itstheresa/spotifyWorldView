@@ -18,7 +18,7 @@
 //= require_tree ./sitewide
 //= require bootstrap-sprockets
 
-//majority of this code is taken from the original open source project and pasted here
+//majority of this code is taken from the original open source project by kaaes and pasted here
 //because this was one of the few places I could figure to place javascript code
 google.load("visualization", "1", {packages:["geochart"]});
 google.setOnLoadCallback(onGoogleLoaded);

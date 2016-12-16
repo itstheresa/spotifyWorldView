@@ -1,3 +1,4 @@
+<!--Map interface page: code originally done by kaaes for "Album Availability"-->
 <html>
   <head>
     <meta charset="utf-8">
@@ -34,6 +35,7 @@
                 </div></center>
           </form>
           <form class="navbar-form navbar-right form-inline">
+            <!--Added button to redirect to main app page with search bar-->
             <a href="http://localhost:3000" class="btn btn-default">Search by Keyword</a>
           </form>
         <h6 class="instructions">Search for an album by URI, keyword, or saved albums from Spotify. The map shows countries in which the album is available.</h6>
@@ -53,7 +55,8 @@
         </div>
       </div>
     </div>
-
+    
+    <!--Error handling for different situations-->
     <div class="albums-only">
       <h2>Invalid URI entered. Please enter a valid URI or search by keyword.</h2>
     </div>
