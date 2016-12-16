@@ -4,12 +4,11 @@
 		<!--instructions-->
 		<h5>To view an album's tracklist and availability in the world...</h5>
 		<center>
-		<!--link to log in through Spotify-->
-		<ul>
-			<h3><b><%= link_to 'Sign In With Spotify', '/auth/spotify' %> </b></h3>	
-			<h4>OR</h4>
+			<!--NEW: link to log in through Spotify-->
+				<h3><b><%= link_to 'Sign In With Spotify', '/auth/spotify' %> </b></h3>	
+				<h4>OR</h4>
 		</center>
-
+		<ul>
 			<!--instructions + search bar for albums-->
 			<%= form_tag albums_path, method: "get", html: { class: "form" } do %>
 			<h5>Search for an album:</h5>
